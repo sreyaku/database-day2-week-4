@@ -57,7 +57,7 @@ def employee_record():
 # e) Print the details of employees whose names start with ‘j’ (or any letter input by the user)
 
 def employee_details(e_name):
-    cursor.execute("SELECT * FROM EMPLOYEE WHERE NAME LIKE '" + e_name + "%'")
+    cursor.execute("SELECT * FROM EMPLOYEE WHERE UPPER(NAME) LIKE '" + e_name + "%'")
 
     result = cursor.fetchall()
 
